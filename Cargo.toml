@@ -1,7 +1,8 @@
 [package]
 
 name = "plex"
-version = "0.2.5"
+version = "0.3.1"
+edition = "2018"
 authors = ["Geoffry Song <goffrie@gmail.com>"]
 
 description = "A syntax extension for writing lexers and parsers."
@@ -25,7 +26,10 @@ parser = ["lalr"]
 [dependencies]
 
 lalr = { version = "0.0.2", optional = true }
-redfa = { version = "0.0.2", optional = true }
-syn = { version = "1.0", features = ["extra-traits", "full"] }
-proc-macro2 = { version = "1.0", features = ["nightly"] }
+redfa = { version = "0.0.3", optional = true }
+syn = { version = "2.0", features = ["extra-traits", "full"] }
+proc-macro2 = { version = "1.0" }
 quote = "1.0"
+
+[dev-dependencies]
+trybuild = "1.0.85"

@@ -1,7 +1,5 @@
 ## plex, a parser and lexer generator
 
-[![Build Status](https://travis-ci.org/goffrie/plex.png)](https://travis-ci.org/goffrie/plex)
-
 This crate provides a couple syntax extensions:
 
 - `lexer!`, which creates a DFA-based lexer that uses maximal munch.  It works
@@ -13,15 +11,13 @@ This crate provides a couple syntax extensions:
   give each nonterminal a Rust type, allowing you to build an AST recursively.
   It also supports spans, giving you convenient source location reporting.
 
-You can find a demo in `examples/demo.rs`. Note that nightly Rust is required.
+You can find a demo in `examples/demo.rs`.
 
 ## Usage
 
-First, include `plex`.
+First, include the `plex` macros.
 
 ```rust
-#![feature(proc_macro_hygiene)]
-extern crate plex;
 use plex::{lexer, parser};
 ```
 
